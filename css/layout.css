@@ -1,0 +1,732 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{margin:0; padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+body{background-color: #ffffff;
+    color:#333333;}
+
+a{text-decoration: none;
+    color:inherit;}
+
+.clearfix::after{display: block; content:""; clear:both;}
+
+
+.wrap{width:100%;}
+
+header{width:100%;
+        height:80px;
+        padding:40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #ffffff;
+        position:fixed;
+        z-index:3;}
+
+header nav li:hover{color:#69BAFF;
+        transition: 0.2s;}
+
+
+nav{width:30%;}
+
+.leftnav li{float:left;
+        margin-left:50px;}
+
+.rightnav li{float:right;
+    margin-right:50px;}
+
+.logo{width:8%;}
+
+.logo img{width:100%;
+        height:100%;
+        margin:0 auto;}
+
+
+.burger{position:relative;
+        width:25px;
+        height:16px;
+        cursor: pointer;
+        display: none;}
+
+.line{position:absolute;
+        width:100%;
+        height:3px;
+        border-radius: 2px;
+        background-color: #69BAFF;
+        left:0;
+        transition:0.2s;}
+
+.line:first-child{top:0;}
+.line:nth-child(2),.line:nth-child(3){top:50%;}
+.line:nth-child(4){top:100%;}
+
+.burger.active span:nth-child(1),
+.burger.active span:nth-child(4){
+        opacity: 0;}
+
+.burger.active span:nth-child(2){
+        transform: rotate(45deg);}
+
+.burger.active span:nth-child(3){
+        transform: rotate(-45deg);}
+
+
+/*-----------main_ad 구간-------------*/        
+
+.main_ad{width:100%;
+        height:800px;
+        background:url(../images/main_bg.png) no-repeat;
+        background-size: 100%;} 
+
+.main_ad img{width:100%;}
+
+.text{position:absolute;
+    top:250px;
+    left:150px;
+    z-index:2;}
+
+.main_ad h3{font-size:40px;
+            color:#ffffff;
+            letter-spacing: 1px;
+            line-height: 40px;
+            font-family: 'Montserrat', sans-serif;}
+
+.main_ad p{font-size:20px;
+                line-height: 50px;
+                color:#ffffff;
+                font-weight:300;}
+
+.main_btn{margin-top:50px}
+
+.main_btn a{border:2px solid #ffffff;
+            border-radius: 30px;
+            padding:10px 30px;
+            text-align: center;
+            color:#ffffff;}
+
+.main_btn a:hover{background-color: #ffffff;
+                    color: #333333;}
+
+.main_ad > span{position:absolute;
+                width:35%;
+                top:10%;
+                right:8%;}
+
+.main_ad > span img{width:100%;}
+.main_ad > span img:hover{transform:scale(1.1);
+                        transition: 0.2s;}
+
+
+/*--------------첫번째 article--------------*/
+
+.content_title1 h3{margin:80px 0px 50px;
+            text-align: center;
+            font-size:24px;
+            font-family: 'Montserrat', sans-serif;}
+
+.content1{width:90%;
+        display:flex;
+        justify-content: space-around;
+        margin:0 auto;}
+
+.con1, .con2, .con3{width:400px;
+                    height:230px;
+                    padding:30px;
+                    border-radius: 30px;
+                    background-color:#f0f0f0;
+                        cursor: pointer;}
+
+.con1{animation-delay: 0s;}
+.con2{animation-delay: 0.2s;}
+.con3{animation-delay: 0.4s;}
+
+
+
+.con1:hover{background-color:#B7D8F4;
+                transition: 0.5s;} 
+
+.con2:hover{background-color:#B7D8F4;
+                transition: 0.5s;} 
+.con3:hover{background-color:#B7D8F4;
+                transition: 0.5s;}
+
+
+.con1 p{font-size:16px;
+        font-weight: 500;
+        margin-bottom:40px;}
+.con2 p{font-size:16px;
+        font-weight: 500;
+        margin-bottom:75px;}
+.con3 p{font-size:16px;
+        font-weight: 500;
+        margin-bottom:20px;}
+
+
+.con1 span, .con2 span, .con3 span{font-size:12px;}
+
+.con1 img, .con2 img, .con3 img{width:170px;
+                                height:170px;
+                                border-radius: 23px;;
+                                float:right;}
+                                
+.content1_btn{display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:50px auto;}
+
+.content1_btn p{width:200px;
+                height:40px;
+                text-align: center;
+                padding:10px 30px;
+                border-radius: 30px;
+                background-color: #d0e6ff;
+                cursor: pointer;}
+
+.content1_btn p:hover{background-color: #ffffff;
+                        border:2px solid #B7D8F4;
+                        padding:8px;}
+
+
+
+/*------------두번째 article(스마트폰)------------*/
+
+.content2{width:100%;
+        height:500px;
+        background-color: #B7D8F4;
+        position:relative;}
+
+.content2_title{padding:100px 80px 0;
+                left: 100px;}
+                
+.content2_title h3{font-size:30px;
+                font-weight:600;
+                font-family: 'Montserrat', sans-serif;
+                animation-delay: 0.4s;}
+
+.content2_text{font-size: 16px;
+                font-weight: 300;
+                padding:20px 80px;}
+.content2_text p{animation-delay: 0.4s;}
+
+.content2_image{position:absolute;
+                right:200px;}
+
+.content2_image img{width:350px;}
+
+.content2_btn p{width:180px;
+                height:40px;
+                margin-left:80px;
+                text-align: center;
+                padding:10px 30px;
+                border-radius: 30px;
+                background-color: #ffffff;
+                cursor: pointer;}
+
+.content2_btn p:hover{background-color:  #69BAFF;
+                        color:#ffffff;
+                        border:2px solid #ffffff;
+                        padding:8px;}
+
+
+/*--------------세번째 article----------------*/
+
+.content3_wrap{width:100%;
+            margin:100px auto;
+            position:relative;}
+
+.content3_title h4{text-align: center;
+                font-size: 40px;
+                letter-spacing: 1px;
+                font-family: 'Montserrat', sans-serif;}
+
+.content3{width:100%;
+        margin:30px auto;
+        text-align: center;}
+
+.content3 > div {width:250px;
+                height:50px;
+                margin: 0 auto;
+                border-radius: 30px;
+                background-color:#D0E6FF;}
+
+.content3 img{width:19px;
+                height:19px;
+                vertical-align: middle;
+                transform: translate(0, -1px);}
+
+.content3 p{margin-top:30px;
+            font-size:500}
+.content3 p:last-child{margin-top:0;}
+
+
+.content3_btn{width:160px;
+                height:30px;
+                line-height: 30px;
+                margin-left:80px;
+                text-align: center;
+                padding:10px 30px;
+                border-radius: 30px;
+                background-color: #ffffff;
+                cursor: pointer;}
+
+.content3_btn:hover{border:2px solid #d0e6ff;
+                background-color: #ffffff;
+                padding:8px;}
+
+
+.content3_wrap > span{position:absolute;
+                    top:-160px;
+                    left:-60px;}
+
+
+.content3_wrap > span > img{width:30%;
+                            height:20%}
+
+
+
+.btimage{width:100%;
+        animation-delay: 0.4s;
+        visibility: hidden;}
+
+.btimage img{width:100%;
+                display: block;}
+
+
+/*-----------footer-----------*/
+
+
+footer{width:100%;
+        padding:30px;
+        font-size:12px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-around;
+        background-color: #D0E6FF;}
+
+footer p{font-size:14px;
+        margin-bottom:15px;}
+
+
+
+
+
+
+/*-------------반응형구간------------*/
+
+@media only screen and (max-width:1920px) and (min-width:1400px){
+        
+        .main_ad > span{position:absolute;
+                width:35%;
+                top:12%;
+                right:5%;}
+
+        .main_ad > span img{width:90%;}
+        
+        .content2_image{top:100px;
+                        right:100px;}
+
+
+        .content2_image img{width:300px;}
+
+}/*1920-1400구간 끝*/
+
+
+
+@media only screen and (max-width:1399px) and (min-width:1024px){
+
+        .leftnav li{float:left;
+                margin-left:20px;
+                font-size:16px;}
+
+        .rightnav li{float:right;
+                        margin-right:20px;
+                        font-size:16px;}
+
+        .logo{width:10%;}
+
+        .main_ad{height:500px;}
+
+        .text{top:200px;
+                left:80px;}
+
+        .main_ad h3{font-size:30px;
+                line-height: 30px;}
+        
+        .main_ad p{font-size:16px;
+                margin-top:15px;
+                width:300px;
+                line-height: 20px;}
+                
+
+        .main_btn{margin-top:20px}
+
+        .main_btn a{padding:8px 14px;
+                        text-align: center;
+                        color:#ffffff;
+                        font-size:12px}
+
+        .main_ad > span{position:absolute;
+                        width:35%;
+                        top:8%;
+                        right:5%;}
+
+        .main_ad > span img{width:90%;}
+
+        /*----레시피 추천 구간---*/
+                
+        .content1{width:98%;
+                display:flex;
+                justify-content: space-around;
+                margin:0 auto;}
+
+        .con1, .con2, .con3{width:320px;
+                        height:230px;
+                        padding:20px;
+                        border-radius: 20px;
+                        margin:20px auto;}
+
+        .con1 p{margin-bottom:120px;}
+
+        .con2 p{margin-bottom:120px;}
+        .con3 p{font-size:16px;
+                font-weight: 500;
+                margin-bottom:100px;}
+
+        .con1 img, .con2 img, .con3 img{width:120px;
+                                height:120px;}
+
+
+        /*----두번째 콘텐츠 구간(스마트폰)---*/
+
+        .content2{height:400px;}
+
+        .content2_title{padding:80px 60px 0;
+                left: 80px;}
+
+        .content2_title h3{font-size:25px;}
+
+        .content2_text{width:500px;
+                        font-size: 14px;
+                        padding:20px 60px;}
+
+        .content2_image{top:100px;
+                right:100px;}
+        
+        
+        .content2_image img{width:250px;}
+
+        .content2_btn p{width:120px;
+                        height:30px;
+                        margin-left:60px;
+                        padding:7px 20px;
+                        font-size:14px;}
+
+
+        /*----세번째 콘텐츠 구간(인스타그램)---*/
+        
+        
+        .content3_wrap > span{position:absolute;
+                                top:-130px;
+                                left:-60px;}
+        
+
+        .content3_title h4{font-size: 28px;}
+
+        footer{padding:15px 0;
+                font-size:12px;
+                display: flex;
+                justify-content: space-around;
+                background-color: #D0E6FF;}
+
+        footer p{font-size:14px;
+                margin:0 4px 12px;}
+
+        footer a{margin:0 5px 12px;}
+
+
+
+}/*1399-1024구간 끝*/
+
+
+
+
+
+
+@media only screen and (max-width:1023px) and (min-width:700px){
+        
+        
+
+        .leftnav li{float:left;
+                        margin-left:15px;
+                        font-size:14px;}
+
+        .rightnav li{float:right;
+                        margin-right:15px;
+                        font-size:14px;}
+
+        .logo{width:15%;}
+
+
+        /*----main 이미지 구간---*/
+
+        .main_ad{height:400px;
+                background-position-y: 150%;}
+
+        .text{top:150px;
+                left:60px;}
+
+        .main_ad h3{font-size:20px;
+                line-height: 25px;}
+        
+        .main_ad p{font-size:16px;
+                margin-top:10px;
+                width:300px;
+                line-height: 20px;}
+
+        .main_btn{margin-top:20px}
+
+        .main_btn a{padding:8px 14px;
+                        text-align: center;
+                        color:#69BAFF;
+                        border:2px solid #69BAFF;
+                        font-size:12px}
+
+        .main_ad > span{position:absolute;
+                width:35%;
+                top:12%;
+                right:5%;}
+
+        .main_ad > span img{width:90%;}
+        
+
+         /*----레시피 추천 구간---*/
+        
+        .content1{width:100%;
+                display: block;}
+
+        .con1, .con2, .con3{width:400px;
+                            height:200px;
+                            padding:20px;
+                            margin:20px auto;}
+
+        .con3 p{font-size:16px;
+                font-weight: 500;
+                margin-bottom:30px;}
+
+        .con1 img, .con2 img, .con3 img{width:160px;
+                                height:160px;}
+
+
+         /*----두번째 콘텐츠 구간(스마트폰)---*/
+
+        .content2{height:400px;}
+
+        .content2_title{padding:60px 60px 0;
+                        left: 80px;}
+
+        .content2_title h3{font-size:20px;}
+
+        .content2_text{width:400px;
+                        font-size: 14px;
+                        padding:20px 60px;}
+
+
+        .content2_image{top:100px;
+                right:50px;}
+        
+        
+        .content2_image img{width:230px;}
+        
+        .content2_btn p{width:120px;
+                        height:30px;
+                        margin-left:60px;
+                        padding:7px 20px;
+                        font-size:14px;}
+
+
+        /*----세번째 콘텐츠 구간(인스타그램)---*/
+
+        .content3_wrap > span{position:absolute;
+                top:-140px;
+                left:-50px;}
+
+        .content3_title h4{font-size: 30px;}
+
+        .content3_btn{width:100px;
+                height:20px;
+                line-height: 20px;
+                margin-left:80px;
+                padding:15px 20px;}
+
+
+
+                
+        footer{padding:15px 0;
+                font-size:12px;
+                display: flex;
+                justify-content: space-around;
+                background-color: #D0E6FF;}
+        
+        footer div{width:30%;
+                padding:0 10px;}        
+
+
+
+        
+
+}/*1023-700구간 끝*/
+
+@media only screen and (max-width:699px){
+
+        /*햄버거 메뉴 제작*/
+        
+        .burger{display: block;
+                z-index: 4;
+                position:absolute;
+                top:32px;
+                right:10px;} 
+
+        header{display: block;}
+
+
+        nav{width:100%;
+        position:absolute;
+        right:0;
+        text-align: center;
+        background-color: #ffffff;
+        display: none;
+        }
+
+        nav:nth-child(1){top:80px;}
+        nav:nth-child(3){top:167px;}
+
+
+
+        .leftnav li{float:none;
+                margin-left:0;
+                padding:5px 0;}
+        
+        .rightnav li{float:none;
+                margin-right:0;
+                padding:5px 0;}
+
+        .logo{width:80px;
+                position:absolute;
+                top:24px;
+                left:10px;
+                z-index: 99;}
+
+
+        /*-----main 구간-----*/                
+        .main_ad{height:300px;
+                background-position-y: 120%;}
+
+        .text{top:130px;
+                left:40px;}
+
+        .main_ad h3{font-size:18px;
+                line-height: 20px;}
+        
+        .main_ad p{font-size:12px;
+                margin-top:5px;
+                width:250px;
+                line-height: 20px;}
+
+        .main_btn{margin-top:10px}
+
+        .main_btn a{padding:5px 10px;
+                        text-align: center;
+                        color:#69BAFF;
+                        border:2px solid #69BAFF;
+                        font-size:12px}
+
+        .main_ad > span{top:100px;
+                        width:150px;
+                        right:40px;}
+
+        /*----레시피 추천 구간---*/
+        
+        .content1{width:100%;
+                display: block;}
+
+        .content_title1 h3 {margin: 40px 0px 50px;}
+
+        .con1, .con2, .con3{width:400px;
+                            height:200px;
+                            padding:20px;
+                            margin:20px auto;}
+
+        .con3 p{font-size:16px;
+                font-weight: 500;
+                margin-bottom:30px;}
+
+        .con1 img, .con2 img, .con3 img{width:160px;
+                                        height:160px;}
+
+
+        /*----두번째 콘텐츠 구간(스마트폰)---*/
+
+        .content2{height:400px;}
+
+        .content2_title{padding:60px 60px 0;
+                        left: 80px;}
+
+        .content2_title h3{font-size:20px;}
+
+        .content2_text{width:400px;
+                        font-size: 14px;
+                        padding:20px 60px;}
+
+
+        .content2_image{bottom:40px;
+                right:0;}
+        
+        
+        .content2_image img{width:150px;}
+        
+        .content2_btn p{width:120px;
+                        height:30px;
+                        margin-left:60px;
+                        padding:7px 20px;
+                        font-size:14px;}
+
+        /*----세번째 콘텐츠 구간(인스타그램)---*/
+
+        .content3_wrap > span{position:absolute;
+                top:-140px;
+                left:-50px;}
+
+        .content3_title h4{font-size: 26px;}
+
+        .content3_btn{width:100px;
+                height:20px;
+                line-height: 20px;
+                margin-left:80px;
+                padding:15px 20px;}
+
+        .content3 p{font-size:14px;}
+
+                
+        footer{padding:15px 0;
+                font-size:12px;
+                display: flex;
+                justify-content: space-around;
+                background-color: #D0E6FF;}
+
+        footer div{width:30%;
+                padding:0 10px;}
+
+
+}/*700이하 끝*/
+
+
+
+
+
+
