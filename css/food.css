@@ -19,11 +19,12 @@ a{text-decoration: none;
 
 header{width:100%;
     height:80px;
-    padding:40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     position:fixed;
+    left:0;
+    top:0;
     background-color: #ffffff;
     z-index: 2;}
 
@@ -94,7 +95,7 @@ nav{width:30%;}
     line-height: 50px;
     font-weight:300;}
 
-    .burger{position:relative;
+.burger{position:relative;
         width:25px;
         height:16px;
         cursor: pointer;
@@ -845,8 +846,9 @@ footer p{font-size:16px;
 
 @media only screen and (max-width:699px){
 
+
     /*햄버거 메뉴 제작*/
-        
+
 .burger{display: block;
     z-index: 4;
     position:absolute;
@@ -888,13 +890,13 @@ nav:nth-child(3){top:167px;}
             background-position-y: 120%;}
 
         .text{top:130px;
-                left:40px;}
+                left:40px;
+                width:70%;}
 
         .main h2{font-size:20px;
                 line-height: 20px;}
 
         .main p{font-size:14px;
-            width:400px;
             margin-top:10px;
             line-height: 20px;}
 
@@ -908,14 +910,15 @@ nav:nth-child(3){top:167px;}
 
         .collection > ul{width:90%;
                         flex-wrap: wrap;
-                        justify-content: space-between;
+                        gap: 30px 50px;
+                        justify-content: center;
                         margin:0 auto;}
 
-        .collection > ul > li{width:175px;}
+        .collection > ul > li{width:120px;}
 
         .collection > ul > li > p{width:120px;
                     height:35px;
-                    margin: 10px;
+                    margin: 10px auto;
                     padding:9px;
                     font-size:14px;}
 
@@ -971,11 +974,21 @@ nav:nth-child(3){top:167px;}
         footer{padding:15px 0;
             font-size:12px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             background-color: #D0E6FF;}
 
-        footer div{width:30%;
-            padding:0 10px;}
+        footer .box1, footer .box2{display: none;}
+
+        footer div{padding:0 14px;}
+        
+        footer .box3{width:40%;}
+        footer .box4{width:40%;}
+        footer .box5{width:20%;}
+
+        
+
+
 
 
 /*모달 반응형 구간*/
