@@ -641,8 +641,6 @@ footer p{font-size:14px;
 
         .main_btn a{padding:5px 10px;
                         text-align: center;
-                        color:#69BAFF;
-                        border:2px solid #69BAFF;
                         font-size:12px}
 
         .main_ad > span{top:100px;
@@ -673,7 +671,7 @@ footer p{font-size:14px;
 
         .content2{height:400px;}
 
-        .content2_title{padding:60px 60px 0;
+        .content2_title{padding:30px 60px 0;
                         left: 80px;}
 
         .content2_title h3{font-size:20px;}
@@ -682,9 +680,10 @@ footer p{font-size:14px;
                         font-size: 14px;
                         padding:20px 60px;}
 
+        .content2_text p{width:200px;}
 
         .content2_image{bottom:40px;
-                right:0;}
+                        right:0;}
         
         
         .content2_image img{width:150px;}
