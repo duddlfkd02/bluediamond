@@ -5,8 +5,7 @@
 *{margin:0; padding:0;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    }
+    font-family: 'Roboto', sans-serif;}
 
 body{background-color: #ffffff;
     color:#333333;}
@@ -80,7 +79,7 @@ nav{width:30%;}
 
 .main_ad{width:100%;
         height:800px;
-        background:url(../images/main_bg.png) no-repeat;
+        background:url("../images/main_bg.png") no-repeat;
         background-size: 100%;} 
 
 .main_ad img{width:100%;}
@@ -261,6 +260,7 @@ nav{width:30%;}
 
 .content3 p{margin-top:30px;
             font-size:500}
+
 .content3 p:last-child{margin-top:0;}
 
 
@@ -321,9 +321,9 @@ footer p{font-size:14px;
 @media only screen and (max-width:1920px) and (min-width:1400px){
         
         .main_ad > span{position:absolute;
-                width:35%;
-                top:12%;
-                right:5%;}
+                        width:35%;
+                        top:12%;
+                        right:5%;}
 
         .main_ad > span img{width:90%;}
         
@@ -406,7 +406,7 @@ footer p{font-size:14px;
         .content2{height:400px;}
 
         .content2_title{padding:80px 60px 0;
-                left: 80px;}
+                        left: 80px;}
 
         .content2_title h3{font-size:25px;}
 
@@ -415,7 +415,7 @@ footer p{font-size:14px;
                         padding:20px 60px;}
 
         .content2_image{top:100px;
-                right:100px;}
+                        right:100px;}
         
         
         .content2_image img{width:250px;}
@@ -563,8 +563,6 @@ footer p{font-size:14px;
                 margin-left:80px;
                 padding:15px 20px;}
 
-
-
                 
         footer{padding:15px 0;
                 font-size:12px;
@@ -575,11 +573,8 @@ footer p{font-size:14px;
         footer div{width:30%;
                 padding:0 10px;}        
 
-
-
-        
-
 }/*1023-700구간 끝*/
+
 
 @media only screen and (max-width:699px){
 
@@ -599,8 +594,7 @@ footer p{font-size:14px;
         right:0;
         text-align: center;
         background-color: #ffffff;
-        display: none;
-        }
+        display: none;}
 
         nav:nth-child(1){top:80px;}
         nav:nth-child(3){top:167px;}
@@ -697,8 +691,8 @@ footer p{font-size:14px;
         /*----세번째 콘텐츠 구간(인스타그램)---*/
 
         .content3_wrap > span{position:absolute;
-                top:-140px;
-                left:-50px;}
+                                top:-140px;
+                                left:-50px;}
 
         .content3_title h4{font-size: 26px;}
 
