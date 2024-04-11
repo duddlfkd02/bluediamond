@@ -166,7 +166,7 @@ nav{width:30%;}
 .chtext li{padding:0 30px;
             line-height: 30px;}
 
-
+label{cursor: pointer;}
 
 /*-----상단 메뉴 구간-----*/
 
