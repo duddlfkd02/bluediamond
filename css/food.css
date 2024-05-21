@@ -2,289 +2,403 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{margin:0; padding:0;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;}
+* {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+}
 
-body{background-color: #ffffff;
-    color:#333333;}
+body {
+        background-color: #ffffff;
+        color: #333333;
+}
 
-a{text-decoration: none;
-    color:inherit;}
+a {
+        text-decoration: none;
+        color: inherit;
+}
 
-.clearfix::after{display: block; content:""; clear:both;}
+.clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+}
 
-.wrap{width:100%;}
+.wrap {
+        width: 100%;
+}
 
-header{width:100%;
-    height:80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position:fixed;
-    left:0;
-    top:0;
-    background-color: #ffffff;
-    z-index: 2;}
+/* header */
+.header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--color-White);
+        position: fixed;
+        z-index: 3;
+}
 
-header nav li:hover{color:#69BAFF;
-    transition: 0.2s;}    
-
-nav{width:30%;}
-
-.leftnav li{float:left;
-            margin-left:50px;}
-
-.rightnav li{float:right;
-            margin-right:50px;}
-
-.logo{width:8%;}
-
-.logo img{width:100%;
-        height:100%;
-        margin:0 auto;}
+.header .menu .nav>li:hover {
+        color: var(--color-accent);
+        transition: 0.2s;
+}
 
 
-.burger{position:relative;
-        width:25px;
-        height:16px;
+.header .menu .nav>li>a {
+        display: inline-block;
+        height: 80px;
+        line-height: 80px;
+}
+
+.header .menu {
+        width: 30%;
+}
+
+.header .menu .leftnav li {
+        float: left;
+        margin-left: 50px;
+}
+
+.header .menu .rightnav li {
+        float: right;
+        margin-right: 50px;
+}
+
+.logo {
+        width: 8%;
+}
+
+.logo img {
+        width: 100%;
+}
+
+/* 모바일 햄버거 메뉴 */
+.burger {
+        position: relative;
+        width: 25px;
+        height: 16px;
         cursor: pointer;
-        display: none;}
+        display: none;
+}
 
-.line{position:absolute;
-        width:100%;
-        height:3px;
+.burger_line {
+        position: absolute;
+        width: 100%;
+        height: 3px;
         border-radius: 2px;
-        background-color: #69BAFF;
-        left:0;
-        transition:0.2s;}
+        background-color: var(--color-accent);
+        left: 0;
+        transition: 0.2s;
+}
 
-.line:first-child{top:0;}
-.line:nth-child(2),.line:nth-child(3){top:50%;}
-.line:nth-child(4){top:100%;}
+.burger_line:first-child {
+        top: 0;
+}
+
+.burger_line:nth-child(2),
+.burger_line:nth-child(3) {
+        top: 50%;
+}
+
+.burger_line:nth-child(4) {
+        top: 100%;
+}
 
 .burger.active span:nth-child(1),
-.burger.active span:nth-child(4){
-        opacity: 0;}
+.burger.active span:nth-child(4) {
+        opacity: 0;
+}
 
-.burger.active span:nth-child(2){
-        transform: rotate(45deg);}
+.burger.active span:nth-child(2) {
+        transform: rotate(45deg);
+}
 
-.burger.active span:nth-child(3){
-        transform: rotate(-45deg);}
-    
+.burger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+}
+
 /*--------메인 이미지--------*/
 
-.main{width:100%;
-    height:600px;
-    background:url("../images/images2/main_img.jpg") no-repeat;
-    background-size:100%;}
+.main {
+        width: 100%;
+        height: 600px;
+        background: url("../images/images2/main_img.jpg") no-repeat;
+        background-size: 100%;
+}
 
 
-.text{position:absolute;
-        top:250px;
-        left:170px;}
+.text {
+        position: absolute;
+        top: 250px;
+        left: 170px;
+}
 
-.main h2{font-size:40px;
+.main h2 {
+        font-size: 40px;
         letter-spacing: 1px;
-        font-family: 'Montserrat', sans-serif;}
+        font-family: 'Montserrat', sans-serif;
+}
 
 
-.main p{font-size:20px;
+.main p {
+        font-size: 20px;
         line-height: 50px;
-        font-weight:300;}
+        font-weight: 300;
+}
 
-.burger{position:relative;
-        width:25px;
-        height:16px;
-        cursor: pointer;
-        display: none;}
 
-.line{position:absolute;
-        width:100%;
-        height:3px;
-        border-radius: 2px;
-        background-color: #69BAFF;
-        left:0;
-        transition:0.2s;}
-
-.line:first-child{top:0;}
-.line:nth-child(2),.line:nth-child(3){top:50%;}
-.line:nth-child(4){top:100%;}
-
-.burger.active span:nth-child(1),
-.burger.active span:nth-child(4){
-        opacity: 0;}
-
-.burger.active span:nth-child(2){
-        transform: rotate(45deg);}
-
-.burger.active span:nth-child(3){
-        transform: rotate(-45deg);}
 
 /*----------컬렉션부분----------*/
 
 
-.collect_wrap{width:85%;
-            margin:50px auto;
-            position:relative;}
+.collect_wrap {
+        width: 85%;
+        margin: 50px auto;
+        position: relative;
+}
 
-.deco1{position: absolute;
-        top:-10%;
-        left:-10%;}
+.deco1 {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+}
 
-.deco2{position: absolute;
-        right:0;
-        top:100%;}
+.deco2 {
+        position: absolute;
+        right: 0;
+        top: 100%;
+}
 
-.deco1 > img{width:20%;}
+.deco1>img {
+        width: 20%;
+}
 
 
-.collection > div > img{width:50%;}
+.collection>div>img {
+        width: 50%;
+}
 
-.collect_wrap h3{font-size:24px;
-                margin:50px;
-                text-align: center;
-                font-family: 'Montserrat', sans-serif;}
+.collect_wrap h3 {
+        font-size: 24px;
+        margin: 50px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+}
 
-.collection > ul{width:100%;
-                    display: flex;
-                    justify-content: space-around;
-                    font-size:14px;}
+.collection>ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 14px;
+}
 
-.collection > ul > li > p{width:170px;
-                            height:45px;
-                            margin: 20px;
-                            padding:13px;
-                            text-align: center;
-                            font-size:16px;
-                            color:#ffffff;
-                            background-color: #69BAFF;
-                            border-radius: 30px;}
+.collection>ul>li>p {
+        width: 170px;
+        height: 45px;
+        margin: 20px;
+        padding: 13px;
+        text-align: center;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #69BAFF;
+        border-radius: 30px;
+}
 
-.chtext li{padding:0 30px;
-            line-height: 30px;}
+.chtext li {
+        padding: 0 30px;
+        line-height: 30px;
+}
 
-label{cursor: pointer;}
+label {
+        cursor: pointer;
+}
 
 /*-----상단 메뉴 구간-----*/
 
-.firstreci_wrap{margin-top:150px;
-                visibility: hidden;}
+.firstreci_wrap {
+        margin-top: 150px;
+        visibility: hidden;
+}
 
-.secondreci_wrap,.thirdreci_wrap{margin-top:80px;
-                visibility: hidden;}
+.secondreci_wrap,
+.thirdreci_wrap {
+        margin-top: 80px;
+        visibility: hidden;
+}
 
-.recipes{width:90%;
-        margin:0 auto;}
+.recipes {
+        width: 90%;
+        margin: 0 auto;
+}
 
-.recipes > ul{display: flex;
-            height:600px;
-            justify-content: space-around;}
-
-
-.reci{width:100%;
-    height:400px;
-    overflow:hidden;
-    border-radius: 20px;}
-
-                                
-.reci_con1{background: url("../images/images2/dish1.png");
-        background-size:cover;
-        background-position:center;}
-.reci_con2{background: url("../images/images2/dish2.png");
-            background-size:cover;
-            background-position:center;}
-.reci_con3{background: url("../images/images2/dish3.png");
-            background-size:cover;
-            background-position:center;}
-.reci_con4{background: url("../images/images2/dish4.png");
-            background-size:cover;
-            background-position:center;}
-.reci_con5{background: url("../images/images2/dish5.png");
-            background-size:cover;
-            background-position:center;}
-.reci_con6{background: url("../images/images2/dish6.png");
-            background-size:cover;
-            background-position:center;}
-.reci_con7{background: url("../images/images2/dish7.webp");
-            background-size:cover;
-            background-position:center;}
-.reci_con8{background: url("../images/images2/dish8.webp");
-            background-size:cover;
-            background-position:center;}
-.reci_con9{background: url("../images/images2/dish9.webp");
-            background-size:cover;
-            background-position:center;}
+.recipes>ul {
+        display: flex;
+        height: 600px;
+        justify-content: space-around;
+}
 
 
-.reci_text{height:200px;}
-
-.recipes ul li h4{font-size: 18px;
-                    margin:10px 0;}
-
-.recipes ul li span{font-size: 14px;
-                font-weight: 300;}
-
-.recipes ul li p{font-size: 14px;
-                font-weight: 300;
-                padding:2px 0;}
-
-.con_top li{font-size: 14px;
-            font-weight:300;
-            float: left;
-            margin-left:20px;
-            padding:8px 0;} 
-
-.con_top li:nth-child(1){margin-left:0;}
-
-.con_top{border-top:1px solid #dddddd;}  
-.con_bt{border-bottom:1px solid #dddddd;}         
-
-.con_bt li{font-size: 14px;
-            font-weight:300;
-            float: left;
-            margin-left:20px;
-            padding:8px 0;} 
-            
-.con_bt li:nth-child(1){margin-left:0;}
+.reci {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 20px;
+}
 
 
+.reci_con1 {
+        background: url("../images/images2/dish1.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con2 {
+        background: url("../images/images2/dish2.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con3 {
+        background: url("../images/images2/dish3.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con4 {
+        background: url("../images/images2/dish4.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con5 {
+        background: url("../images/images2/dish5.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con6 {
+        background: url("../images/images2/dish6.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con7 {
+        background: url("../images/images2/dish7.webp");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con8 {
+        background: url("../images/images2/dish8.webp");
+        background-size: cover;
+        background-position: center;
+}
+
+.reci_con9 {
+        background: url("../images/images2/dish9.webp");
+        background-size: cover;
+        background-position: center;
+}
 
 
-.morebtn{display: flex;
+.reci_text {
+        height: 200px;
+}
+
+.recipes ul li h4 {
+        font-size: 18px;
+        margin: 10px 0;
+}
+
+.recipes ul li span {
+        font-size: 14px;
+        font-weight: 300;
+}
+
+.recipes ul li p {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 2px 0;
+}
+
+.con_top li {
+        font-size: 14px;
+        font-weight: 300;
+        float: left;
+        margin-left: 20px;
+        padding: 8px 0;
+}
+
+.con_top li:nth-child(1) {
+        margin-left: 0;
+}
+
+.con_top {
+        border-top: 1px solid #dddddd;
+}
+
+.con_bt {
+        border-bottom: 1px solid #dddddd;
+}
+
+.con_bt li {
+        font-size: 14px;
+        font-weight: 300;
+        float: left;
+        margin-left: 20px;
+        padding: 8px 0;
+}
+
+.con_bt li:nth-child(1) {
+        margin-left: 0;
+}
+
+
+
+
+.morebtn {
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin:100px auto;
-        width:147px;
-        height:40px;
+        margin: 100px auto;
+        width: 147px;
+        height: 40px;
         text-align: center;
         background-color: #69BAFF;
-        color:#ffffff;
+        color: #ffffff;
         border-radius: 30px;
-        padding:10px 24px;
-        cursor: pointer;}
+        padding: 10px 24px;
+        cursor: pointer;
+}
 
 
-.morebtn:hover{background-color: #ffffff;
-                color:#69BAFF;
-                border:2px solid #69BAFF;
-                padding:8px 20px;}
+.morebtn:hover {
+        background-color: #ffffff;
+        color: #69BAFF;
+        border: 2px solid #69BAFF;
+        padding: 8px 20px;
+}
 
 /*-----------footer-----------*/
 
 
-footer{width:100%;
-    padding:30px;
-    font-size:14px;
-    font-weight: 300;
-    display: flex;
-    justify-content: space-around;
-    background-color: #D0E6FF;}
+footer {
+        width: 100%;
+        padding: 30px;
+        font-size: 14px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-around;
+        background-color: #D0E6FF;
+}
 
-footer p{font-size:16px;
-    margin-bottom:15px;}
+footer p {
+        font-size: 16px;
+        margin-bottom: 15px;
+}
 
 
 
@@ -293,142 +407,204 @@ footer p{font-size:16px;
 /*모달*/
 
 
-.modal{position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);}
+.modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
 
-.modal_wrap{width:1250px;
-            height:800px;
-            margin:0 auto;
-            background-color: #ffffff;
-            border-radius: 20px;
-            position:relative;
-            padding:20px;}
+.modal_wrap {
+        width: 1250px;
+        height: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 20px;
+        position: relative;
+        padding: 20px;
+}
 
-.modalbt img{width:30px;
-        height:30px;
-        position:absolute;
-        right:20px;
-        top:20px;
-        cursor: pointer;}
+.modalbt img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+}
 
-.modal_top{width:1200px;
-            display: flex;}
+.modal_top {
+        width: 1200px;
+        display: flex;
+}
 
-.food{padding:35px 35px 0;}
+.food {
+        padding: 35px 35px 0;
+}
 
-.food img{width:100%;
-        border-radius: 30px;}
+.food img {
+        width: 100%;
+        border-radius: 30px;
+}
 
 
-.useitem h3{font-size:28px;
-            margin:35px 0 100px;
-            font-family: 'Montserrat', sans-serif;}
-            
-.useitem img{width:40%;}
+.useitem h3 {
+        font-size: 28px;
+        margin: 35px 0 100px;
+        font-family: 'Montserrat', sans-serif;
+}
 
-.useitem_text{float:right;
-                margin-right:100px;
-                font-size: 18px;
-                margin-top:135px;}
+.useitem img {
+        width: 40%;
+}
 
-.useitem_text p:nth-child(2){margin-bottom:20px;}
+.useitem_text {
+        float: right;
+        margin-right: 100px;
+        font-size: 18px;
+        margin-top: 135px;
+}
 
-.btn a{width:150px;
-        height:40px;
+.useitem_text p:nth-child(2) {
+        margin-bottom: 20px;
+}
+
+.btn a {
+        width: 150px;
+        height: 40px;
         text-align: center;
         line-height: 40px;
-        font-size:16px;
-        color:#ffffff;
+        font-size: 16px;
+        color: #ffffff;
         border-radius: 30px;
         display: inline-block;
         background-color: #69BAFF;
-        cursor: pointer;}
+        cursor: pointer;
+}
 
-.btn a:hover{background-color: #ffffff;
-                color:#69BAFF;
-                border:2px solid #69BAFF;}
+.btn a:hover {
+        background-color: #ffffff;
+        color: #69BAFF;
+        border: 2px solid #69BAFF;
+}
 
 /*---설명부분---*/
 
-.modal_bottom_wrap{padding:35px 0 0 65px;
-            width:100%;
-            margin:auto;
-            overflow: auto;}
+.modal_bottom_wrap {
+        padding: 35px 0 0 65px;
+        width: 100%;
+        margin: auto;
+        overflow: auto;
+}
 
-.modal_bottom{width:150%;
-            display: flex;}
+.modal_bottom {
+        width: 150%;
+        display: flex;
+}
 
-.modal_bottom_wrap::-webkit-scrollbar{
-                    height:10px;
-                    border-radius: 5px;}
+.modal_bottom_wrap::-webkit-scrollbar {
+        height: 10px;
+        border-radius: 5px;
+}
 
-.modal_bottom_wrap::-webkit-scrollbar-track{border-radius: 10px;
-                    box-shadow: inset 0px 0px 5px white;
-                    background-color: #E9F5FF;}
+.modal_bottom_wrap::-webkit-scrollbar-track {
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px white;
+        background-color: #E9F5FF;
+}
 
-.modal_bottom_wrap::-webkit-scrollbar-thumb{
-            background-color: #92ccff;
-            border-radius: 5px;}
+.modal_bottom_wrap::-webkit-scrollbar-thumb {
+        background-color: #92ccff;
+        border-radius: 5px;
+}
 
-.directions{padding-bottom:10px;}
-.directions h3{font-size:20px;
-                margin-left:-25px;
-                font-family: 'Montserrat', sans-serif;}
+.directions {
+        padding-bottom: 10px;
+}
+
+.directions h3 {
+        font-size: 20px;
+        margin-left: -25px;
+        font-family: 'Montserrat', sans-serif;
+}
 
 
-.directions ul{margin-top:10px;}
+.directions ul {
+        margin-top: 10px;
+}
 
-.directions ul li{list-style-type:decimal-leading-zero;
-                font-weight: 600;
-                color:#69BAFF;
-                padding:5px 0;}
+.directions ul li {
+        list-style-type: decimal-leading-zero;
+        font-weight: 600;
+        color: #69BAFF;
+        padding: 5px 0;
+}
 
-.directions ul li p{font-size:16px;
-                    font-weight: 300;
-                    line-height: 20px;
-                    color:#333333;}
+.directions ul li p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        color: #333333;
+}
 
 
 /*----재료----*/
 
 
-.ingredient{margin-left: 30px;
-                font-size:16px;
-                font-weight: 300;
-                line-height: 25px;}
+.ingredient {
+        margin-left: 30px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+}
 
-.ingredient h3{font-size:20px;
-                font-family: 'Montserrat', sans-serif;}
+.ingredient h3 {
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+}
 
-.ingredient ul{float:left;
-                width:50%;
-                margin:10px 0;
-                padding-left: 25px;}
-.ingredient ul li{list-style-type: disc;}
+.ingredient ul {
+        float: left;
+        width: 50%;
+        margin: 10px 0;
+        padding-left: 25px;
+}
+
+.ingredient ul li {
+        list-style-type: disc;
+}
 
 
 /*----레시피추천----*/
 /*----스크롤 시 보여짐----*/
 
-.modal_more{width:40%;
-            margin-left:50px;}
+.modal_more {
+        width: 40%;
+        margin-left: 50px;
+}
 
-.modal_more h3{font-size:20px;
-                padding-bottom:20px;
-                font-family: 'Montserrat', sans-serif;}
+.modal_more h3 {
+        font-size: 20px;
+        padding-bottom: 20px;
+        font-family: 'Montserrat', sans-serif;
+}
 
-.modal_more p{font-size:20px;
-                font-weight: 500;
-                padding:20px 0;}
+.modal_more p {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 20px 0;
+}
 
 
-.modal_more img{width:30%;
-                border-radius: 20px;}
+.modal_more img {
+        width: 30%;
+        border-radius: 20px;
+}
 
-.more_text{float: right;
-    margin-right:150px;}
+.more_text {
+        float: right;
+        margin-right: 150px;
+}
 
 
 
@@ -439,672 +615,1027 @@ footer p{font-size:16px;
 
 /*모달 창 띄우기*/
 
-.modal_bg{position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height: 100%;
-            background-color: rgb(0,0,0,0.5);
-            display: none;}
+.modal_bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5);
+        display: none;
+}
 
-.modal_wrap{display: none;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;}
+.modal_wrap {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+}
 
 
 
 /*=====반응형구간=====*/
 
-@media only screen and (max-width:1399px) and (min-width:1024px){
+@media only screen and (max-width:1399px) and (min-width:1024px) {
 
-        .leftnav li{float:left;
-                margin-left:20px;
-                font-size:16px;}
-
-        .rightnav li{float:right;
-                        margin-right:20px;
-                        font-size:16px;}
-
-        .logo{width:10%}
-
-        .main{height:500px;}
-
-        .text{top:200px;
-                left:80px;}
-
-        .main h2{font-size:32px;
-                line-height: 30px;}
-
-        .main p{font-size:16px;
-                margin-top:15px;
-                line-height: 20px;}
-
-
-        .collect_wrap{width:80%;
-        margin:40px auto;
-        position:relative;}
-
-        .deco1{position: absolute;
-                top:-15%;
-                left:-10%;}
-
-        .deco2{position: absolute;
-                right:-50px;
-                top:100%;}
-
-        .deco1 img{width:15%;}
-        .deco2  img{width:100px;}
-
-        .collection > ul{width:90%;
-                        margin:0 auto;}
-
-        .collection > ul > li > p{width:150px;
-                                height:40px;
-                                margin: 20px;
-                                padding:10px;
-                                text-align: center;
-                                font-size:16px;
-                                color:#ffffff;
-                                background-color: #69BAFF;
-                                border-radius: 30px;}
-
-
-        .recipes > ul > li > div{width:90%;
-                margin:0 auto;
-                height:300px;}
-
-        .recipes > ul > li{width:90%;
-                        margin:0 auto;}
-
-        .recipes ul li h4{font-size: 18px;
-                        margin:14px;}
-
-        .recipes > ul > li > span{font-size: 14px;
-                        margin:0 14px;}
-
-        .recipes > ul > li p{margin:0 14px;
-                        padding:2px 0;}
-
-        .con_top{width:90%;
-                margin:0 auto;}
-
-        .con_bt{width:90%;
-        margin:0 auto;}
-
-        .con_bt li{font-size: 14px;
-                font-weight:300;
+        .header .menu .leftnav li {
                 float: left;
-                margin-left:36px;
-                padding:8px 0;}
+                margin-left: 20px;
+                font-size: 16px;
+        }
 
-        .con_bt li:nth-child(3n+1){margin-left:0;}
-        .con_bt li:last-child{margin-left:62px;}
+        .header .menu .rightnav li {
+                float: right;
+                margin-right: 20px;
+                font-size: 16px;
+        }
 
-        footer{padding:15px 0;
-        font-size:12px;
-        display: flex;
-        justify-content: space-around;
-        background-color: #D0E6FF;}
+        .logo {
+                width: 10%;
+        }
 
-        footer p{font-size:14px;
-        margin:0 4px 12px;}
+        .main {
+                height: 500px;
+        }
 
-        footer a{margin:0 5px 12px;}
+        .text {
+                top: 200px;
+                left: 80px;
+        }
+
+        .main h2 {
+                font-size: 32px;
+                line-height: 30px;
+        }
+
+        .main p {
+                font-size: 16px;
+                margin-top: 15px;
+                line-height: 20px;
+        }
+
+
+        .collect_wrap {
+                width: 80%;
+                margin: 40px auto;
+                position: relative;
+        }
+
+        .deco1 {
+                position: absolute;
+                top: -15%;
+                left: -10%;
+        }
+
+        .deco2 {
+                position: absolute;
+                right: -50px;
+                top: 100%;
+        }
+
+        .deco1 img {
+                width: 15%;
+        }
+
+        .deco2 img {
+                width: 100px;
+        }
+
+        .collection>ul {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .collection>ul>li>p {
+                width: 150px;
+                height: 40px;
+                margin: 20px;
+                padding: 10px;
+                text-align: center;
+                font-size: 16px;
+                color: #ffffff;
+                background-color: #69BAFF;
+                border-radius: 30px;
+        }
+
+
+        .recipes>ul>li>div {
+                width: 90%;
+                margin: 0 auto;
+                height: 300px;
+        }
+
+        .recipes>ul>li {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .recipes ul li h4 {
+                font-size: 18px;
+                margin: 14px;
+        }
+
+        .recipes>ul>li>span {
+                font-size: 14px;
+                margin: 0 14px;
+        }
+
+        .recipes>ul>li p {
+                margin: 0 14px;
+                padding: 2px 0;
+        }
+
+        .con_top {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .con_bt {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .con_bt li {
+                font-size: 14px;
+                font-weight: 300;
+                float: left;
+                margin-left: 36px;
+                padding: 8px 0;
+        }
+
+        .con_bt li:nth-child(3n+1) {
+                margin-left: 0;
+        }
+
+        .con_bt li:last-child {
+                margin-left: 62px;
+        }
+
+        footer {
+                padding: 15px 0;
+                font-size: 12px;
+                display: flex;
+                justify-content: space-around;
+                background-color: #D0E6FF;
+        }
+
+        footer p {
+                font-size: 14px;
+                margin: 0 4px 12px;
+        }
+
+        footer a {
+                margin: 0 5px 12px;
+        }
 
 
 
-/*모달 반응형 구간*/
+        /*모달 반응형 구간*/
 
 
-        .modal_wrap{width:800px;
-                height:700px;
-                margin:0 auto;
-                position:relative;}
+        .modal_wrap {
+                width: 800px;
+                height: 700px;
+                margin: 0 auto;
+                position: relative;
+        }
 
-        .modal_top{width:750px;
-                display: flex;}
+        .modal_top {
+                width: 750px;
+                display: flex;
+        }
 
-        .food{padding:20x 20px 0;}
+        .food {
+                padding: 20x 20px 0;
+        }
 
-        .food img{width:350px;
-                border-radius: 30px;}
+        .food img {
+                width: 350px;
+                border-radius: 30px;
+        }
 
-        .useitem h3{font-size:26px;
-                margin:20px 0 85px;}
-                
-        .useitem img{width:120px;}
+        .useitem h3 {
+                font-size: 26px;
+                margin: 20px 0 85px;
+        }
 
-        .useitem_text{float:right;
-                        margin-right:-20px;
-                        font-size: 16px;
-                        margin-top:44px;}
+        .useitem img {
+                width: 120px;
+        }
 
-        .btn a{width:140px;
-                height:30px;
+        .useitem_text {
+                float: right;
+                margin-right: -20px;
+                font-size: 16px;
+                margin-top: 44px;
+        }
+
+        .btn a {
+                width: 140px;
+                height: 30px;
                 text-align: center;
                 line-height: 30px;
-                font-size:14px;}
-
-        .btn a:hover{padding-bottom:20px;
-                        background-color: #ffffff;
-                        color:#69BAFF;
-                        border:1px solid #69BAFF;}
-/*---설명부분---*/
-
-        .directions{padding-bottom:10px;}
-
-        .directions h3{font-size:18px;
-                margin-left: -30px;}
-
-        .directions ul{margin-top:10px;}
-
-        .directions ul li{font-weight: 500;}
-
-        .directions ul li p{font-size:16px;}
-
-
-        .ingredient{font-size:14px;}
-
-        .ingredient h3{font-size:18px;
-                margin-left: 10px;}
-
-        .modal_more{width:40%;
-                margin-left:50px;}
-
-        .modal_more h3{font-size:18px;
-                padding-bottom: 15px;}
-
-        .modal_more p{font-size:16px;
-                        padding: 0;}
-
-
-        .modal_more img{width:150px;
-                        border-radius: 20px;}
-
-        .more_text{float: right;
-                        margin-right:30px;}
-
-
-        .modal_bg{position:fixed;
-                top:0;
-                left:0;
-                width:100%;
-                height: 100%;
-                background-color: rgb(0,0,0,0.5);
-                display: none;}
-
-        .modal_wrap{display: none;
-                position:absolute;
-                top:50%;
-                left:50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;}
-}/*1399-1024구간 끝*/
-
-
-
-
-@media only screen and (max-width:1023px) and (min-width:700px){
-
-        .leftnav li{float:left;
-                margin-left:15px;
-                font-size:14px;}
-
-        .rightnav li{float:right;
-        margin-right:15px;
-        font-size:14px;}
-
-        .logo{width:15%;}
-
-        .main{height:400px;}
-
-        .text{top:180px;
-                left:60px;}
-
-        .main h2{font-size:30px;
-                line-height: 30px;}
-
-        .main p{font-size:16px;
-                margin-top:10px;
-                line-height: 20px;}
-                
-
-        .collect_wrap{width:90%;
-        margin:20px auto;
-        position:relative;}
-
-        .collect_wrap h3{font-size:20px;
-        margin:30px auto;}
-
-        .deco1, .deco2{display: none;}
-
-        .collection > ul{width:90%;
-                        margin:0 auto;}
-
-        .collection > ul > li > p{width:120px;
-                        height:35px;
-                        margin: 10px;
-                        padding:9px;
-                        font-size:14px;}
-
-        .chtext{font-size:12px;}
-
-        .firstreci_wrap{margin-top:80px;
-        visibility: hidden;}
-
-        .secondreci_wrap,.thirdreci_wrap{margin-top:0px;
-                        visibility: hidden;}
-
-        .recipes{width:100%;
-                margin:0 auto;}
-
-        .recipes > ul{display: block;
-                height:auto;}
-
-        .recipes > ul > li{margin:0 auto;
-                        display: flex;}
-
-        .recipes > ul > li div{margin:20px 10px;}
-
-        .con_top li{margin-left:10px;}
-        .con_top li:nth-child(2n+1){margin-left:0;}
-
-
-        .con_bt li{margin-left:10px;}
-        .con_bt li:nth-child(3n+1){margin-left:0;}
-
-        footer{padding:15px 0;
-        font-size:12px;
-        display: flex;
-        justify-content: space-around;
-        background-color: #D0E6FF;}
-
-        footer div{width:30%;
-                padding:0 10px;}
-
-/*모달 반응형 구간*/
-
-
-        .modal_wrap{width:500px;
-        height:700px;
-        margin:0;
-        position:relative;}
-
-        .modal_top{width:500px;}
-
-        .food{padding: 10px 0;
-                width:300px;}
-
-        .food img{width:250px;
-                border-radius: 30px;}
-
-        .useitem h3{font-size:20px;
-                margin: 10px;}
-                
-        .useitem img{width:100px;
-                margin-left:30px;}
-
-        .useitem_text{font-size: 14px;
-                        margin-top:7px;}
-
-        .useitem_text p:nth-child(2) {margin-bottom: 9px;}
-
-
-
-        .btn a{width:80px;
-        height:28px;
-        text-align: center;
-        line-height: 28px;
-        font-size:12px;}
-
-
-
-/*---설명부분---*/
-
-        .modal_bottom_wrap{padding:20px 35px 45px;
-                        width:100%;
-                        height:400px;
-                        margin:auto;}
-
-        .modal_bottom{width:100%;
-                display: block;}
-
-
-        .directions{padding-bottom:10px;}
-
-        .directions h3{font-size:18px;
-                margin-left: -30px;}
-
-        .directions ul{margin-top:10px;}
-
-        .directions ul li{font-weight: 500;}
-
-        .directions ul li p{font-size:16px;}
-
-
-
-        .ingredient{margin-left: -25px;
-        font-size:16px;
-        font-weight: 300;
-        line-height: 25px;}
-
-        .ingredient h3{font-size:18px;
-                padding-bottom:10px;
-                font-family: 'Montserrat', sans-serif;}
-
-        .ingredient ul{float:none;
-                        width:100%;
-                        margin:0;}
-
-        .modal_more{width:100%;
-                margin-left:-15px;}
-
-        .modal_more h3{font-size:18px;
-                padding: 15px 0;}
-
-        .modal_more p{font-size:16px;
-                        padding: 0;}
-
-
-        .modal_more img{width:180px;
-                        border-radius: 20px;}
-
-        .more_text{float: right;
-        margin-right:-28px;
-        font-size: 14px;}
-
-
-        .modal_bg{position:fixed;
-                top:0;
-                left:0;
-                width:100%;
-                height: 100%;
-                background-color: rgb(0,0,0,0.5);
-                display: none;}
-
-        .modal_wrap{display: none;
-                position:absolute;
-                top:50%;
-                left:50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;}
-
-
-}/*1023-700구간 끝*/
-
-
-
-@media only screen and (max-width:699px){
-
-
-    /*햄버거 메뉴 제작*/
-
-        .burger{display: block;
-        z-index: 4;
-        position:absolute;
-        top:32px;
-        right:10px;} 
-
-        header{display: block;}
-
-
-        nav{width:100%;
-                position:absolute;
-                right:0;
-                text-align: center;
+                font-size: 14px;
+        }
+
+        .btn a:hover {
+                padding-bottom: 20px;
                 background-color: #ffffff;
-                display: none;}
+                color: #69BAFF;
+                border: 1px solid #69BAFF;
+        }
 
-        nav:nth-child(1){top:80px;}
-        nav:nth-child(3){top:167px;}
+        /*---설명부분---*/
 
+        .directions {
+                padding-bottom: 10px;
+        }
 
+        .directions h3 {
+                font-size: 18px;
+                margin-left: -30px;
+        }
 
-        .leftnav li{float:none;
-                margin-left:0;
-                padding:5px 0;}
+        .directions ul {
+                margin-top: 10px;
+        }
 
-        .rightnav li{float:none;
-                margin-right:0;
-                padding:5px 0;}
+        .directions ul li {
+                font-weight: 500;
+        }
 
-        .logo{width:80px;
-                position:absolute;
-                top:24px;
-                left:10px;
-                z-index: 99;}
-
-/*-----main 구간-----*/ 
-
-        .main{height:300px;
-        background-position-y: 120%;}
-
-        .text{top:130px;
-                left:40px;
-                width:70%;}
-
-        .main h2{font-size:20px;
-                line-height: 20px;}
-
-        .main p{font-size:14px;
-        margin-top:10px;
-        line-height: 20px;}
-
-        .collect_wrap{width:90%;
-        margin:20px auto;}
-
-        .collect_wrap h3{font-size:18px;
-                margin:30px auto;}
-
-        .deco1, .deco2{display: none;}
-
-        .collection > ul{width:90%;
-                        flex-wrap: wrap;
-                        gap: 30px 50px;
-                        justify-content: center;
-                        margin:0 auto;}
-
-        .collection > ul > li{width:120px;}
-
-        .collection > ul > li > p{width:120px;
-                height:35px;
-                margin: 10px auto;
-                padding:9px;
-                font-size:14px;}
-
-        .chtext li{padding:0 10px;
-                line-height: 30px;}
+        .directions ul li p {
+                font-size: 16px;
+        }
 
 
-        .firstreci_wrap{margin-top:80px;
-                        visibility: hidden;}
+        .ingredient {
+                font-size: 14px;
+        }
 
-        .secondreci_wrap,.thirdreci_wrap{margin-top:0px;
-                                        visibility: hidden;}
+        .ingredient h3 {
+                font-size: 18px;
+                margin-left: 10px;
+        }
 
-        .recipes{width:90%;
-                margin:0 auto;}
+        .modal_more {
+                width: 40%;
+                margin-left: 50px;
+        }
 
-        .recipes > ul{display: block;
-                height:auto;}
+        .modal_more h3 {
+                font-size: 18px;
+                padding-bottom: 15px;
+        }
 
-        .recipes > ul > li > div{width:90%;
-                                margin:0 auto;
-                                height:300px;}
-
-        .recipes > ul > li{width:90%;
-                        margin:0 auto;}
-
-        .recipes ul li h4{font-size: 18px;
-                        margin:14px;}
-
-        .recipes > ul > li span{font-size: 14px;
-                                margin:0px;}
-
-        .recipes > ul > li span:nth-child(1){margin-right:14px;}
-
-        .recipes > ul > li p{margin:0 14px;
-                        padding:2px 0;}
+        .modal_more p {
+                font-size: 16px;
+                padding: 0;
+        }
 
 
-        .con_top{width:92%;
-        margin:0 auto;}
+        .modal_more img {
+                width: 150px;
+                border-radius: 20px;
+        }
 
-        .con_bt{width:92%;
-        margin:0 auto;}
+        .more_text {
+                float: right;
+                margin-right: 30px;
+        }
 
-        .con_bt li{font-size: 14px;
-                font-weight:300;
+
+        .modal_bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0, 0, 0, 0.5);
+                display: none;
+        }
+
+        .modal_wrap {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+        }
+}
+
+/*1399-1024구간 끝*/
+
+
+
+
+@media only screen and (max-width:1023px) and (min-width:700px) {
+
+        .header .menu .leftnav li {
                 float: left;
-                margin-left: 22px;
-                padding:8px 0;}
+                margin-left: 15px;
+                font-size: 14px;
+        }
 
-        .con_bt li:nth-child(4){margin-left:0;}
+        .header .menu .rightnav li {
+                float: right;
+                margin-right: 15px;
+                font-size: 14px;
+        }
 
-        footer{padding:15px 0;
-        font-size:12px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: #D0E6FF;}
+        .logo {
+                width: 15%;
+        }
 
-        footer .box1, footer .box2{display: none;}
+        .main {
+                height: 400px;
+        }
 
-        footer div{padding:0 14px;}
+        .text {
+                top: 180px;
+                left: 60px;
+        }
 
-        footer .box3{width:40%;}
-        footer .box4{width:40%;}
-        footer .box5{width:20%;}
+        .main h2 {
+                font-size: 30px;
+                line-height: 30px;
+        }
 
-        
+        .main p {
+                font-size: 16px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
 
 
-/*모달 반응형 구간*/
+        .collect_wrap {
+                width: 90%;
+                margin: 20px auto;
+                position: relative;
+        }
 
-        .modal_wrap{width:400px;
-        height:700px;
-        margin:0;
-        position:relative;}
+        .collect_wrap h3 {
+                font-size: 20px;
+                margin: 30px auto;
+        }
 
-        .modalbt img{width:25px;
-                height:25px;}
+        .deco1,
+        .deco2 {
+                display: none;
+        }
 
-        .modal_top{width:380px;
-                margin:0 auto;
-                display: block;}
+        .collection>ul {
+                width: 90%;
+                margin: 0 auto;
+        }
 
-        .food{padding:0;
-                width:270px;}
+        .collection>ul>li>p {
+                width: 120px;
+                height: 35px;
+                margin: 10px;
+                padding: 9px;
+                font-size: 14px;
+        }
 
-        .food img{width:100%;
-                border-radius: 30px;}
+        .chtext {
+                font-size: 12px;
+        }
 
-        .useitem{width: 350px;
+        .firstreci_wrap {
+                margin-top: 80px;
+                visibility: hidden;
+        }
+
+        .secondreci_wrap,
+        .thirdreci_wrap {
+                margin-top: 0px;
+                visibility: hidden;
+        }
+
+        .recipes {
+                width: 100%;
+                margin: 0 auto;
+        }
+
+        .recipes>ul {
+                display: block;
+                height: auto;
+        }
+
+        .recipes>ul>li {
+                margin: 0 auto;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom:10px;}
+        }
+
+        .recipes>ul>li div {
+                margin: 20px 10px;
+        }
+
+        .con_top li {
+                margin-left: 10px;
+        }
+
+        .con_top li:nth-child(2n+1) {
+                margin-left: 0;
+        }
 
 
-        .useitem h3{font-size:20px;
-                margin:0;
-                width:110px;}
-                
-        .useitem img{width:100px;
-                margin:18px;}
+        .con_bt li {
+                margin-left: 10px;
+        }
 
-        .useitem_text{float:none;
-                        margin-right:0px;
-                        font-size: 16px;
-                        margin-top:0px;}
+        .con_bt li:nth-child(3n+1) {
+                margin-left: 0;
+        }
 
-        .useitem_text p{font-size:14px;}
+        footer {
+                padding: 15px 0;
+                font-size: 12px;
+                display: flex;
+                justify-content: space-around;
+                background-color: #D0E6FF;
+        }
 
-        .useitem_text p:nth-child(2) {margin-bottom: 9px;}
+        footer div {
+                width: 30%;
+                padding: 0 10px;
+        }
 
-        .btn a{width:80px;
+        /*모달 반응형 구간*/
+
+
+        .modal_wrap {
+                width: 500px;
+                height: 700px;
+                margin: 0;
+                position: relative;
+        }
+
+        .modal_top {
+                width: 500px;
+        }
+
+        .food {
+                padding: 10px 0;
+                width: 300px;
+        }
+
+        .food img {
+                width: 250px;
+                border-radius: 30px;
+        }
+
+        .useitem h3 {
+                font-size: 20px;
+                margin: 10px;
+        }
+
+        .useitem img {
+                width: 100px;
+                margin-left: 30px;
+        }
+
+        .useitem_text {
+                font-size: 14px;
+                margin-top: 7px;
+        }
+
+        .useitem_text p:nth-child(2) {
+                margin-bottom: 9px;
+        }
+
+
+
+        .btn a {
+                width: 80px;
                 height: 28px;
                 text-align: center;
                 line-height: 28px;
-                font-size:12px;}
-
-        .btn a:hover{background-color: #ffffff;
-                color:#69BAFF;
-                border:1px solid #69BAFF;}
-
-/*---설명부분---*/
-
-        .modal_bottom_wrap{padding:20px 35px 45px;
-                        width:100%;
-                        height:300px;
-                        margin:10px 0;
-                        overflow-y:scroll;}
-
-        .modal_bottom{width:100%;
-                        display: block;}
-
-
-        .directions{padding-bottom:10px;}
-
-        .directions h3{font-size:18px;
-                margin-left: -30px;}
-
-        .directions ul{margin-top:10px;}
-
-        .directions ul li{font-weight: 500;}
-
-        .directions ul li p{font-size:14px;}
+                font-size: 12px;
+        }
 
 
 
-        .ingredient{margin-left: -25px;
-                font-size:16px;
+        /*---설명부분---*/
+
+        .modal_bottom_wrap {
+                padding: 20px 35px 45px;
+                width: 100%;
+                height: 400px;
+                margin: auto;
+        }
+
+        .modal_bottom {
+                width: 100%;
+                display: block;
+        }
+
+
+        .directions {
+                padding-bottom: 10px;
+        }
+
+        .directions h3 {
+                font-size: 18px;
+                margin-left: -30px;
+        }
+
+        .directions ul {
+                margin-top: 10px;
+        }
+
+        .directions ul li {
+                font-weight: 500;
+        }
+
+        .directions ul li p {
+                font-size: 16px;
+        }
+
+
+
+        .ingredient {
+                margin-left: -25px;
+                font-size: 16px;
                 font-weight: 300;
-                line-height: 25px;}
+                line-height: 25px;
+        }
 
-        .ingredient h3{font-size:16px;
-                padding-bottom:10px;
-                font-family: 'Montserrat', sans-serif;}
+        .ingredient h3 {
+                font-size: 18px;
+                padding-bottom: 10px;
+                font-family: 'Montserrat', sans-serif;
+        }
 
-        .ingredient ul{float:none;
-                        width:100%;
-                        margin:0;}
+        .ingredient ul {
+                float: none;
+                width: 100%;
+                margin: 0;
+        }
 
-        .modal_more{width:100%;
-                margin-left:-15px;}
+        .modal_more {
+                width: 100%;
+                margin-left: -15px;
+        }
 
-        .modal_more h3{font-size:16px;
-                padding: 15px 0;}
+        .modal_more h3 {
+                font-size: 18px;
+                padding: 15px 0;
+        }
 
-        .modal_more p{font-size:14px;
-                        padding: 0;}
-
-
-        .modal_more img{width:120px;
-                        border-radius: 20px;}
-
-        .more_text{float: right;
-                margin-right:-26px;
-                font-size: 12px;}
+        .modal_more p {
+                font-size: 16px;
+                padding: 0;
+        }
 
 
-        .modal_bg{position:fixed;
-                top:0;
-                left:0;
-                width:100%;
+        .modal_more img {
+                width: 180px;
+                border-radius: 20px;
+        }
+
+        .more_text {
+                float: right;
+                margin-right: -28px;
+                font-size: 14px;
+        }
+
+
+        .modal_bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
                 height: 100%;
-                background-color: rgb(0,0,0,0.5);
-                display: none;}
+                background-color: rgb(0, 0, 0, 0.5);
+                display: none;
+        }
 
-        .modal_wrap{display: none;
-                position:absolute;
-                top:50%;
-                left:50%;
+        .modal_wrap {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
                 transform: translate(-50%, -50%);
-                z-index: 2;}
+                z-index: 2;
+        }
 
 
-}   
+}
+
+/*1023-700구간 끝*/
+
+
+
+@media only screen and (max-width:699px) {
+
+
+        /*햄버거 메뉴 제작*/
+
+        .burger {
+                display: block;
+                z-index: 4;
+                position: absolute;
+                top: 32px;
+                right: 10px;
+        }
+
+        header {
+                height: 80px;
+        }
+
+        .header .menu {
+                width: 100%;
+                position: absolute;
+                text-align: center;
+                background-color: var(--color-White);
+                display: none;
+        }
+
+        .header .menu:nth-child(1) {
+                top: 80px;
+        }
+
+        .header .menu:nth-child(3) {
+                top: 320px;
+        }
+
+        .header .menu .leftnav>li {
+                float: none;
+                margin-left: 0;
+        }
+
+        .header .menu .rightnav>li {
+                float: none;
+                margin-right: 0;
+        }
+
+        .logo {
+                width: 80px;
+                position: absolute;
+                top: 24px;
+                left: 10px;
+                z-index: 10;
+        }
+
+        /*-----main 구간-----*/
+
+        .main {
+                height: 300px;
+                background-position-y: 120%;
+        }
+
+        .text {
+                top: 130px;
+                left: 40px;
+                width: 70%;
+        }
+
+        .main h2 {
+                font-size: 20px;
+                line-height: 20px;
+        }
+
+        .main p {
+                font-size: 14px;
+                margin-top: 10px;
+                line-height: 20px;
+        }
+
+        .collect_wrap {
+                width: 90%;
+                margin: 20px auto;
+        }
+
+        .collect_wrap h3 {
+                font-size: 18px;
+                margin: 30px auto;
+        }
+
+        .deco1,
+        .deco2 {
+                display: none;
+        }
+
+        .collection>ul {
+                width: 90%;
+                flex-wrap: wrap;
+                gap: 30px 50px;
+                justify-content: center;
+                margin: 0 auto;
+        }
+
+        .collection>ul>li {
+                width: 120px;
+        }
+
+        .collection>ul>li>p {
+                width: 120px;
+                height: 35px;
+                margin: 10px auto;
+                padding: 9px;
+                font-size: 14px;
+        }
+
+        .chtext li {
+                padding: 0 10px;
+                line-height: 30px;
+        }
+
+
+        .firstreci_wrap {
+                margin-top: 80px;
+                visibility: hidden;
+        }
+
+        .secondreci_wrap,
+        .thirdreci_wrap {
+                margin-top: 0px;
+                visibility: hidden;
+        }
+
+        .recipes {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .recipes>ul {
+                display: block;
+                height: auto;
+        }
+
+        .recipes>ul>li>div {
+                width: 90%;
+                margin: 0 auto;
+                height: 300px;
+        }
+
+        .recipes>ul>li {
+                width: 90%;
+                margin: 0 auto;
+        }
+
+        .recipes ul li h4 {
+                font-size: 18px;
+                margin: 14px;
+        }
+
+        .recipes>ul>li span {
+                font-size: 14px;
+                margin: 0px;
+        }
+
+        .recipes>ul>li span:nth-child(1) {
+                margin-right: 14px;
+        }
+
+        .recipes>ul>li p {
+                margin: 0 14px;
+                padding: 2px 0;
+        }
+
+
+        .con_top {
+                width: 92%;
+                margin: 0 auto;
+        }
+
+        .con_bt {
+                width: 92%;
+                margin: 0 auto;
+        }
+
+        .con_bt li {
+                font-size: 14px;
+                font-weight: 300;
+                float: left;
+                margin-left: 22px;
+                padding: 8px 0;
+        }
+
+        .con_bt li:nth-child(4) {
+                margin-left: 0;
+        }
+
+        footer {
+                padding: 15px 0;
+                font-size: 12px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                background-color: #D0E6FF;
+        }
+
+        footer .box1,
+        footer .box2 {
+                display: none;
+        }
+
+        footer div {
+                padding: 0 14px;
+        }
+
+        footer .box3 {
+                width: 40%;
+        }
+
+        footer .box4 {
+                width: 40%;
+        }
+
+        footer .box5 {
+                width: 20%;
+        }
+
+
+
+
+        /*모달 반응형 구간*/
+
+        .modal_wrap {
+                width: 400px;
+                height: 700px;
+                margin: 0;
+                position: relative;
+        }
+
+        .modalbt img {
+                width: 25px;
+                height: 25px;
+        }
+
+        .modal_top {
+                width: 380px;
+                margin: 0 auto;
+                display: block;
+        }
+
+        .food {
+                padding: 0;
+                width: 270px;
+        }
+
+        .food img {
+                width: 100%;
+                border-radius: 30px;
+        }
+
+        .useitem {
+                width: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+        }
+
+
+        .useitem h3 {
+                font-size: 20px;
+                margin: 0;
+                width: 110px;
+        }
+
+        .useitem img {
+                width: 100px;
+                margin: 18px;
+        }
+
+        .useitem_text {
+                float: none;
+                margin-right: 0px;
+                font-size: 16px;
+                margin-top: 0px;
+        }
+
+        .useitem_text p {
+                font-size: 14px;
+        }
+
+        .useitem_text p:nth-child(2) {
+                margin-bottom: 9px;
+        }
+
+        .btn a {
+                width: 80px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+                font-size: 12px;
+        }
+
+        .btn a:hover {
+                background-color: #ffffff;
+                color: #69BAFF;
+                border: 1px solid #69BAFF;
+        }
+
+        /*---설명부분---*/
+
+        .modal_bottom_wrap {
+                padding: 20px 35px 45px;
+                width: 100%;
+                height: 300px;
+                margin: 10px 0;
+                overflow-y: scroll;
+        }
+
+        .modal_bottom {
+                width: 100%;
+                display: block;
+        }
+
+
+        .directions {
+                padding-bottom: 10px;
+        }
+
+        .directions h3 {
+                font-size: 18px;
+                margin-left: -30px;
+        }
+
+        .directions ul {
+                margin-top: 10px;
+        }
+
+        .directions ul li {
+                font-weight: 500;
+        }
+
+        .directions ul li p {
+                font-size: 14px;
+        }
+
+
+
+        .ingredient {
+                margin-left: -25px;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 25px;
+        }
+
+        .ingredient h3 {
+                font-size: 16px;
+                padding-bottom: 10px;
+                font-family: 'Montserrat', sans-serif;
+        }
+
+        .ingredient ul {
+                float: none;
+                width: 100%;
+                margin: 0;
+        }
+
+        .modal_more {
+                width: 100%;
+                margin-left: -15px;
+        }
+
+        .modal_more h3 {
+                font-size: 16px;
+                padding: 15px 0;
+        }
+
+        .modal_more p {
+                font-size: 14px;
+                padding: 0;
+        }
+
+
+        .modal_more img {
+                width: 120px;
+                border-radius: 20px;
+        }
+
+        .more_text {
+                float: right;
+                margin-right: -26px;
+                font-size: 12px;
+        }
+
+
+        .modal_bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0, 0, 0, 0.5);
+                display: none;
+        }
+
+        .modal_wrap {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+        }
+
+
+}
