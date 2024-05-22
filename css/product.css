@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 * {
         margin: 0;
@@ -11,8 +10,8 @@
 }
 
 body {
-        background-color: #ffffff;
-        color: #333333;
+        background-color: var(--color-White);
+        color: var(--color-text);
 }
 
 a {
@@ -48,6 +47,7 @@ a {
         display: inline-block;
         height: 80px;
         line-height: 80px;
+        font-weight: 300;
 }
 
 .header .menu {
@@ -140,7 +140,7 @@ a {
 
 .main p {
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 200;
         line-height: 30px;
 }
 
@@ -164,12 +164,13 @@ a {
         justify-content: center;
         align-items: center;
         margin: 20px auto;
-        color: #69BAFF;
+        color: var(--color-accent);
 }
 
 .subbtn ul li {
         padding: 0 30px;
-        border-right: 2px solid #69BAFF;
+        font-weight: 300;
+        border-right: 2px solid var(--color-accent);
         cursor: pointer;
 }
 
@@ -178,14 +179,14 @@ a {
 }
 
 .subbtn ul li span:hover {
-        border-bottom: 2px solid #69BAFF;
+        border-bottom: 2px solid var(--color-accent);
         transition: 0.2s;
 }
 
 
 /*----------------첫번째 줄 제품----------------*/
 
-section {
+.contentBox {
         width: 1400px;
         margin: 0 auto;
 }
@@ -203,7 +204,7 @@ section {
         height: 420px;
         width: 23.5%;
         margin-left: 2%;
-        border: 1px solid #d9d9d9;
+        border: 1px solid var(--color-gray1);
         border-radius: 10px;
         position: relative;
         overflow: hidden;
@@ -277,7 +278,7 @@ section {
         height: 420px;
         width: 23.5%;
         margin-left: 2%;
-        border: 1px solid #d9d9d9;
+        border: 1px solid var(--color-gray1);
         border-radius: 10px;
         position: relative;
         overflow: hidden;
@@ -329,7 +330,7 @@ section {
         height: 420px;
         width: 23.5%;
         margin-left: 2%;
-        border: 1px solid #d9d9d9;
+        border: 1px solid var(--color-gray1);
         border-radius: 10px;
         position: relative;
         overflow: hidden;
@@ -374,16 +375,17 @@ section {
         width: 160px;
         height: 40px;
         text-align: center;
+        font-weight: 300;
         padding: 10px 30px;
         border-radius: 30px;
-        background-color: #d0e6ff;
+        background-color: var(--color-accent2);
         cursor: pointer;
 }
 
 .more_btn p:hover {
-        background-color: #ffffff;
-        border: 2px solid #69BAFF;
-        color: #69BAFF;
+        background-color: var(--color-White);
+        border: 2px solid var(--color-accent);
+        color: var(--color-accent);
         padding: 8px;
 }
 
@@ -393,23 +395,24 @@ section {
         height: 90px;
         font-size: 14px;
         position: relative;
-        border-top: 1px solid #d9d9d9;
+        border-top: 1px solid var(--color-gray1);
 }
 
 .info:hover {
-        background-color: #D0E6FF;
+        background-color: var(--color-accent2);
         transition: 0.5s;
 }
 
 .info>p {
         text-align: left;
-        font-weight: 500;
+        font-weight: 400;
         padding: 15px 20px;
         font-size: 16px;
 }
 
 .info span {
         padding: 5px 20px;
+        font-weight: 300;
 }
 
 
@@ -423,18 +426,19 @@ section {
         width: 50px;
         height: 30px;
         text-align: center;
+        font-weight: 300;
         line-height: 26px;
-        background-color: #69BAFF;
-        border: 2px solid #69BAFF;
+        background-color: var(--color-accent);
+        border: 2px solid var(--color-accent);
         border-radius: 20px;
-        color: #ffffff;
+        color: var(--color-White);
         cursor: pointer;
 }
 
 .cartbtn p:hover {
-        background-color: #ffffff;
+        background-color: var(--color-White);
         border-radius: 20px;
-        color: #69BAFF;
+        color: var(--color-accent);
 }
 
 
@@ -464,7 +468,7 @@ section {
 .nutthin ul li {
         text-align: center;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
         cursor: pointer;
 }
 
@@ -489,10 +493,10 @@ footer {
         width: 100%;
         padding: 30px;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 200;
         display: flex;
         justify-content: space-around;
-        background-color: #D0E6FF;
+        background-color: var(--color-accent2);
 }
 
 footer p {
@@ -533,37 +537,17 @@ footer p {
         /*--------서브메뉴버튼---------*/
 
         .subbtn {
-                width: 100%;
                 margin: 50px 0;
         }
 
         .subbtn h3 {
-                width: 100%;
                 font-size: 24px;
         }
 
-        .subbtn ul {
-                margin: 20px auto;
-        }
-
-        .subbtn ul li {
-                padding: 0 30px;
-                border-right: 2px solid #69BAFF;
-                cursor: pointer;
-        }
-
-        .subbtn ul li:last-child {
-                border-right: 0;
-        }
-
-        .subbtn ul li span:hover {
-                border-bottom: 2px solid #69BAFF;
-                transition: 0.2s;
-        }
 
         /*----------------첫번째 줄 제품----------------*/
 
-        section {
+        .contentBox {
                 width: 1000px;
                 margin: 0 auto;
         }
@@ -643,22 +627,9 @@ footer p {
         }
 
         .cartbtn p {
-                /*padding:5px 20px; */
                 width: 50px;
                 height: 30px;
-                text-align: center;
                 line-height: 26px;
-                background-color: #69BAFF;
-                border: 2px solid #69BAFF;
-                border-radius: 20px;
-                color: #ffffff;
-                cursor: pointer;
-        }
-
-        .cartbtn p:hover {
-                background-color: #ffffff;
-                border-radius: 20px;
-                color: #69BAFF;
         }
 
         .third_product ul {
@@ -692,9 +663,6 @@ footer p {
         footer {
                 padding: 15px 0;
                 font-size: 12px;
-                display: flex;
-                justify-content: space-around;
-                background-color: #D0E6FF;
         }
 
         footer p {
@@ -742,12 +710,10 @@ footer p {
 
         /*--------서브메뉴버튼---------*/
         .subbtn {
-                width: 100%;
                 margin: 50px 0;
         }
 
         .subbtn h3 {
-                width: 100%;
                 font-size: 24px;
         }
 
@@ -757,23 +723,12 @@ footer p {
 
         .subbtn ul li {
                 padding: 0 10px;
-                border-right: 2px solid #69BAFF;
-                cursor: pointer;
-        }
-
-        .subbtn ul li:last-child {
-                border-right: 0;
-        }
-
-        .subbtn ul li span:hover {
-                border-bottom: 2px solid #69BAFF;
-                transition: 0.2s;
         }
 
         /*----------------첫번째 줄 제품----------------*/
 
 
-        section {
+        .contentBox {
                 width: 680px;
                 margin: 0 auto;
         }
@@ -916,10 +871,6 @@ footer p {
                 padding: 15px 0;
                 font-size: 12px;
                 margin-top: 20px;
-                ;
-                display: flex;
-                justify-content: space-around;
-                background-color: #D0E6FF;
         }
 
         footer div {
@@ -1018,18 +969,9 @@ footer p {
                 margin: 5px 0;
         }
 
-        .subbtn ul li:nth-child(3) {
-                border-right: 0;
-        }
-
-        .subbtn ul li span:hover {
-                border-bottom: 2px solid #69BAFF;
-                transition: 0.2s;
-        }
-
         /*----------------첫번째 줄 제품----------------*/
 
-        section {
+        .contentBox {
                 width: 100%;
                 margin: 0 auto;
         }
@@ -1175,10 +1117,6 @@ footer p {
         footer {
                 padding: 15px 0;
                 font-size: 12px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                background-color: #D0E6FF;
         }
 
         footer .box1,
