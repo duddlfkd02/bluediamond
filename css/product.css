@@ -65,7 +65,8 @@ a {
 }
 
 .logo {
-        width: 8%;
+        position: relative;
+        width: 150px;
 }
 
 .logo img {
@@ -520,10 +521,6 @@ footer p {
                 font-size: 16px;
         }
 
-        .logo {
-                width: 10%;
-        }
-
         .main {
                 height: 400px;
         }
@@ -693,11 +690,6 @@ footer p {
                 margin-right: 15px;
                 font-size: 14px;
         }
-
-        .logo {
-                width: 15%;
-        }
-
 
         .main {
                 height: 400px;
@@ -891,7 +883,7 @@ footer p {
                 z-index: 4;
                 position: absolute;
                 top: 32px;
-                right: 10px;
+                right: 16px;
         }
 
         header {
@@ -925,11 +917,9 @@ footer p {
         }
 
         .logo {
-                width: 80px;
-                position: absolute;
-                top: 24px;
-                left: 10px;
-                z-index: 10;
+                width: 100px;
+                top: 0px;
+                left: -36%;
         }
 
         .main {

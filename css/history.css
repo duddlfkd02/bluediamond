@@ -59,7 +59,9 @@ a {
 }
 
 .logo {
-        width: 8%;
+        position: relative;
+        width: 150px;
+
 }
 
 .logo img {
@@ -412,7 +414,7 @@ footer p {
                 display: block;
                 position: absolute;
                 top: 32px;
-                right: 10px;
+                right: 16px;
                 z-index: 4;
         }
 
@@ -447,11 +449,9 @@ footer p {
         }
 
         .logo {
-                width: 80px;
-                position: absolute;
-                top: 24px;
-                left: 10px;
-                z-index: 10;
+                width: 100px;
+                top: 0px;
+                left: -36%;
         }
 
         /*-----------main 구간-------------*/
